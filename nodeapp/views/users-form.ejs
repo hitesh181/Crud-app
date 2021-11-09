@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = stylesheet type="text/css" href="/stylesheets/style-users.css">
+</head>
+<body>
+<!--====form section start====-->
+<div class="container">
+   <h1 style='text-align: center;'><%= message %></h1>
+    <form action="<%=(typeof editData!='undefined')?'/users/edit/'+editData.S_No:'/users/create'%>" method="POST">
+
+      <label for="name"><b>Name:</b></label>
+          <input type="text" placeholder="Enter Full Name" name="Name" required value="<%=(typeof editData!='undefined')? editData.Name:''%>">
+
+          <label for="course"><b>Course:</b></label>
+          <input type="text" placeholder="Enter Course Name" name="Course" required value="<%=(typeof editData!='undefined')? editData.Course:''%>">
+
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email Address" name="Email" required value="<%=(typeof editData!='undefined')? editData.Email:''%>">
+
+          <label for="stu_id"><b>Student_Id to be Updated:</b></label>
+          <input type="number" placeholder="Enter Student Id" name="Student_Id" required value="<%=(typeof editData!='undefined')? editData.Student_Id:''%>">
+
+          <label><b>Enter Marks in Subject 1 to be Edited</b></label>
+          <input type="number" placeholder="Enter Marks 1" name="Marks_1" required value="<%=(typeof editData!='undefined')? editData.Marks_1:''%>">
+
+          <label><b>Enter Marks in Subject 2 to be Edited</b></label>          <input type="number" placeholder="Enter Marks 2" name="Marks_2" required value="<%=(typeof editData!='undefined')? editData.Marks_1:''%>">
+
+          <label><b>Enter Marks in Subject 3 to be Edited</b></label>          <input type="number" placeholder="Enter Marks 3" name="Marks_3" required value="<%=(typeof editData!='undefined')? editData.Marks_1:''%>">
+
+
+          <button class="registerbtn" type="submit">Update</button>
+        </div>
+</div>
+<!--====form section start====--><code></code>
+</body>
+</html>
+

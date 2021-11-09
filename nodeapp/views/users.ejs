@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel = stylesheet type="text/css" href="/stylesheets/style-users.css">
+  <title><%= title %></title>
+
+</head>
+<body>
+<!--====form section start====-->
+<form action="/users/create" method="POST" onsubmit='window.alert("Record Submitted Succesfully")';>
+  <div class="container" >
+    <h1 style='text-align: center;'>Student Registeration</h1>
+    <p>Please fill in this form to enter details of the Student.</p>
+    <hr>
+
+    <label for="name"><b>Name:</b></label>
+    <input type="text" placeholder="Enter Email" name="Name" id="Name" >
+
+    <label for="age"><b>Age:</b></label>
+    <input type="number" placeholder="Enter Age" name="Age" id="Age" >
+
+    <label for="gender"><b>Gender:</b></label>
+    <input type="text" placeholder="Enter gender" name="Gender" id="Gender" >
+
+    <label for="course"><b>Course:</b></label>
+    <input type="text" placeholder="Enter course" name="Course" id="Course" >
+
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="Email" id="Email" >
+
+    <label for="stu_id"><b>Student_Id:</b></label>
+    <input type="number" placeholder="Enter Student_Id" name="Student_Id" id="stu_id" >
+
+    <label for="marks1"><b>marks 1:</b></label>
+    <input type="number" placeholder="Enter marks 1" name="Marks_1" id="marks1" >
+
+    <label for="marks2"><b>marks 2:</b></label>
+    <input type="number" placeholder="Enter marks 2" name="Marks_2" id="marks2" >
+
+    <label for="marks3"><b>marks 3:</b></label>
+    <input type="number" placeholder="Enter marks 3" name="Marks_3" id="marks3" >
+
+    <hr>
+
+    <button type="submit" class="registerbtn">Submit</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Want to Check all the Students?<a href="./user-list">Display</a>.</p>
+  </div>
+<!--====form section start====-->
+</body>
+<script>
+</script>
+</html>

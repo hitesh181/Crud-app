@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel = stylesheet type="text/css" href="/stylesheets/style-users-list.css">
+  <title><%= title %></title>
+</head>
+<body>
+    <h1 style='text-align: center;'><%= message %></h1>
+    <div class="table-data">
+       
+    <table class=table>
+        <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Course</th>
+            <th>Email</th>
+            <th>Student Id</th>
+            <th>Marks_1</th>
+            <th>Marks_2</th>
+            <th>Marks 3</th>
+
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <%
+        if(userData.length!=0){
+        var S_No=1;
+        userData.forEach(function(data){
+        %>
+        <tbody>
+        <tr>
+            <td><%=S_No; %></td>
+            <td><%=data.Name %></td>
+            <td><%=data.Age %></td>
+            <td><%=data.Gender %></td>
+            <td><%=data.Course %></td>
+            <td><%=data.Email %></td>
+            <td><%=data.Student_Id %></td>
+            <td><%=data.Marks_1 %></td>
+            <td><%=data.Marks_2 %></td>
+            <td><%=data.Marks_3 %></td>
+            <td><a href="/users/edit/<%=data.S_No%>">Edit</a></td>
+            <td><a href="/users/delete/<%=data.S_No%>">Delete</a></td>
+        </tr>
+        <%  S_No++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
